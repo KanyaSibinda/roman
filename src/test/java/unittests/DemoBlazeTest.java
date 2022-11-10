@@ -21,8 +21,8 @@ public class DemoBlazeTest extends RomanBase {
     @Test
     public void addingNewUser(){
         Applications applications = new Applications(roman());
-        applications.homePage.signUp(new Credentials("vegeter@kai.dbz","vegeter"));
-        applications.homePage.logIn(new Credentials("vegeter@kai.dbz", "vegeter"));
+        applications.homePage.signUp(new Credentials("zegeter@kaii.dbz","vegeter"));
+        applications.homePage.logIn(new Credentials("zegeter@kaii.dbz", "vegeter"));
         assertEquals("https://www.demoblaze.com/index.html#",applications.homePage.getUrl());
     }
 
@@ -35,7 +35,7 @@ public class DemoBlazeTest extends RomanBase {
         String message = applications.storePage.getPopUpText();
         applications.storePage.clickOkOnPopUp();
         applications.storePage.goToCartPage();
-        assertEquals("Product added.", message);
+        assertEquals("Product added", message);
         assertTrue(applications.cartPage.checkIfItemIsInCart());
     }
 }
